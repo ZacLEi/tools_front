@@ -37,3 +37,12 @@
     transform: rotate(360deg);
   }
 }
+
+a{
+  color: #282c34;
+}
+
+a:hover{
+  color: #ff7840;
+  text-decoration: underline;
+}
