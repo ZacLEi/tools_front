@@ -1,10 +1,10 @@
 import './App.css';
-import News from "./component/News";
+import MainLayout from "./layout/MainLayout";
 
 function App() {
   return (
     <div className="App">
-      <News></News>
+      <MainLayout/>
     </div>
   );
 }
