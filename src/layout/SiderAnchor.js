@@ -14,7 +14,7 @@ class SiderAnchor extends React.Component{
         const titles = this.state.titles;
         return (
             <div>
-                <Anchor style={{width:200,textAlign:'center',backgroundColor:'#f0f2f5'}}>
+                <Anchor style={{textAlign:'center',backgroundColor:'#f0f2f5'}}>
                     {
                         titles.map((e) => {
                             return(

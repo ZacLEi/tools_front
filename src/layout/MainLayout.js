@@ -3,8 +3,18 @@ import React, {Component} from 'react';
 import './MainLayout.less';
 import Bikan from "../component/bikan/Bikan";
 import SiderAnchor from "./SiderAnchor";
+import {
+    AppstoreOutlined,
+    MenuUnfoldOutlined,
+    MenuFoldOutlined,
+    PieChartOutlined,
+    DesktopOutlined,
+    ContainerOutlined,
+    MailOutlined,
+} from '@ant-design/icons';
 
 const {Header, Content, Footer, Sider} = Layout;
+const { SubMenu } = Menu;
 
 class MainLayout extends Component {
     constructor(props) {
@@ -64,7 +74,30 @@ class MainLayout extends Component {
                 <Content>
                     <Layout>
                         <Sider className="site-layout-background" style={{width:200,textAlign:'center',backgroundColor:'#f0f2f5',marginTop:'30px'}}>
-                            <SiderAnchor titles={this.state.toolsMenu}/>
+                            <Menu
+                                defaultSelectedKeys={['1']}
+                                defaultOpenKeys={['sub1']}
+                                mode="inline"
+                                theme="light"
+                                inlineCollapsed={this.state.collapsed}
+                                style={{backgroundColor:'#f0f2f5',color:'#000000'}}
+                            >
+                                <Menu.Item key="1" icon={<PieChartOutlined />}>
+                                    工具配置
+                                </Menu.Item>
+                                <SubMenu key="sub1" icon={<MailOutlined />} title="工具导航">
+                                    <SiderAnchor titles={this.state.toolsMenu}/>
+                                </SubMenu>
+                                <SubMenu key="sub2" icon={<AppstoreOutlined />} title="Navigation Two">
+                                    <Menu.Item key="9">Option 9</Menu.Item>
+                                    <Menu.Item key="10">Option 10</Menu.Item>
+                                    <SubMenu key="sub3" title="Submenu">
+                                        <Menu.Item key="11">Option 11</Menu.Item>
+                                        <Menu.Item key="12">Option 12</Menu.Item>
+                                    </SubMenu>
+                                </SubMenu>
+                            </Menu>
+
                         </Sider>
 
                         <Content style={{padding: '0 50px'}}>
