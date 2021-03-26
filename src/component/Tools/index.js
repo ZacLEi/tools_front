@@ -16,7 +16,7 @@ const cardStyle = {
     borderRadius: "15px",
 }
 
-class Tools extends React.Component {
+class Index extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -82,4 +82,4 @@ class Tools extends React.Component {
     }
 }
 
-export default Tools;
+export default Index;
