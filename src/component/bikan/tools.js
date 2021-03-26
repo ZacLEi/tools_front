@@ -16,7 +16,7 @@ const cardStyle = {
     borderRadius: "15px",
 }
 
-class Bikan extends React.Component {
+class Tools extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -82,4 +82,4 @@ class Bikan extends React.Component {
     }
 }
 
-export default Bikan;
+export default Tools;

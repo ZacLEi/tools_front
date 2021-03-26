@@ -1,7 +1,7 @@
 import {Layout, Menu, Breadcrumb, Card} from "antd";
 import React, {Component} from 'react';
 import './MainLayout.less';
-import Bikan from "../component/bikan/Bikan";
+import Tools from "../component/bikan/tools";
 import SiderAnchor from "./SiderAnchor";
 import {
     AppstoreOutlined,
@@ -103,7 +103,7 @@ class MainLayout extends Component {
                         <Content style={{padding: '0 50px'}}>
                             {toolsMenu.map((e) =>{
                                return(
-                                   <Bikan  name={e.name} nameEn={e.nameEn} kind={e.kind}/>
+                                   <Tools name={e.name} nameEn={e.nameEn} kind={e.kind}/>
                                )
                             })}
                         </Content>
